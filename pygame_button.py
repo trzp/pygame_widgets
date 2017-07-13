@@ -54,7 +54,7 @@ class button:
         pygame.draw.rect(self.root,self.bordercolor,self.rect,borderwidth)
 
 
-    def update(self,ev,callback=None):
+    def update(self,ev,callback=None,args=None):
         self.__place()
         if self.enable:
             if self.rect.collidepoint(pygame.mouse.get_pos()):  self.focused = 1
@@ -62,5 +62,6 @@ class button:
 
             for e in ev:
                 if e.type == MOUSEBUTTONUP and self.focused:
-                    if not callback == None:    callback.call()
-                    ev.remove(e)
+                    if not callback == None:
+                        if not args==None:  callback(args)
+                        else:               callback()
