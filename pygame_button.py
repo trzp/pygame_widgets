@@ -54,7 +54,7 @@ class button:
         pygame.draw.rect(self.root,self.bordercolor,self.rect,borderwidth)
 
 
-    def update(self,ev,callback=None,args=None):
+    def update(self,ev,callback=None):
         self.__place()
         if self.enable:
             if self.rect.collidepoint(pygame.mouse.get_pos()):  self.focused = 1
