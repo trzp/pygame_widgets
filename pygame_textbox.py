@@ -8,8 +8,10 @@ import time
 
 class textbox:
     """
-    give thanks to Nearoo on github
-    updated by mrtang
+    original: forked from Nearoo on github
+    original author: Silas Gyger <silasgyger@gmail.com>
+
+    extended by mrtang
     date:2017.7
     version:1.0
     email:mrtang@nudt.edu.cn
